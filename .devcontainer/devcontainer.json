@@ -5,9 +5,6 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/go:0-1.20",
 
-	// eg: "appPort": [ 3000, "8921:5000" ]
-	"appPort": ["8090:8080"],
-
 	"containerEnv": {
 		"GOPROXY": "https://proxy.golang.com.cn,direct"
 	},
@@ -15,8 +12,11 @@
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
+	// eg: "appPort": [ 3000, "8921:5000" ]
+	// "appPort": ["8090:8080"],
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [8080],
+	"forwardPorts": [8080],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "go version"
